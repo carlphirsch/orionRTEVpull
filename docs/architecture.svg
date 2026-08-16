@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 730" width="1280" height="730" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="aDark" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 1.5 L 11 6 L 1 10.5 z" fill="#1e293b"/>
+    </marker>
+    <marker id="aSlate" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 1.5 L 11 6 L 1 10.5 z" fill="#334155"/>
+    </marker>
+    <marker id="aGreen" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 1.5 L 11 6 L 1 10.5 z" fill="#065f46"/>
+    </marker>
+    <marker id="aGreenLight" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 1.5 L 11 6 L 1 10.5 z" fill="#34d399"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1280" height="730" fill="#f8fafc"/>
+
+  <text x="640" y="48" text-anchor="middle" font-size="27" font-weight="700" fill="#0f172a">How a pull reaches the live event log</text>
+  <text x="640" y="80" text-anchor="middle" font-size="16.5" fill="#475569">Your client talks only to the Orion server. The server reaches each node over the agent channel it already maintains.</text>
+
+  <!-- ============ COLUMN 1 : WORKSTATION ============ -->
+  <rect x="60" y="180" width="300" height="250" rx="14" fill="#dbeafe" stroke="#1d4ed8" stroke-width="4.5"/>
+  <path d="M 60 194 a 14 14 0 0 1 14 -14 h 272 a 14 14 0 0 1 14 14 v 30 h -300 z" fill="#1d4ed8"/>
+  <text x="210" y="210" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">Your workstation</text>
+
+  <text x="210" y="258" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">orionRTEVpull.py</text>
+  <text x="210" y="284" text-anchor="middle" font-size="14.5" fill="#1e293b">python 3.7+ &#183; requests</text>
+  <line x1="100" y1="306" x2="320" y2="306" stroke="#93b4f5" stroke-width="2.5"/>
+  <text x="210" y="334" text-anchor="middle" font-size="14.5" fill="#1e293b">local Orion account</text>
+  <text x="210" y="360" text-anchor="middle" font-size="14.5" fill="#1e293b">no RDP client</text>
+  <text x="210" y="386" text-anchor="middle" font-size="14.5" fill="#1e293b">no Windows credentials</text>
+
+  <!-- ============ COLUMN 2 : ORION SERVER ============ -->
+  <rect x="520" y="180" width="320" height="250" rx="14" fill="#e0e7ff" stroke="#4338ca" stroke-width="4.5"/>
+  <path d="M 520 194 a 14 14 0 0 1 14 -14 h 292 a 14 14 0 0 1 14 14 v 30 h -320 z" fill="#4338ca"/>
+  <text x="680" y="210" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">Orion server</text>
+
+  <text x="680" y="256" text-anchor="middle" font-size="15.5" font-weight="700" fill="#0f172a">web console</text>
+  <text x="680" y="280" text-anchor="middle" font-size="14.5" fill="#1e293b">forms authentication</text>
+  <line x1="560" y1="302" x2="800" y2="302" stroke="#a5b0f0" stroke-width="2.5"/>
+  <text x="680" y="330" text-anchor="middle" font-size="15.5" font-weight="700" fill="#0f172a">Real-Time Event Log Viewer</text>
+  <text x="680" y="354" text-anchor="middle" font-size="14.5" fill="#1e293b">runs the read as a background job</text>
+  <text x="680" y="378" text-anchor="middle" font-size="14.5" fill="#1e293b">holds the paging window</text>
+  <text x="680" y="404" text-anchor="middle" font-size="13.5" font-weight="700" fill="#4338ca">requires the RTEV account right</text>
+
+  <!-- ============ COLUMN 3 : ENDPOINTS ============ -->
+  <!-- optional node (lighter): added only when you name several -->
+  <rect x="990" y="155" width="250" height="86" rx="12" fill="#f0fdf4" stroke="#6ee7b7" stroke-width="3.5"/>
+  <text x="1115" y="190" text-anchor="middle" font-size="16.5" font-weight="700" fill="#047857">Agent-managed node</text>
+  <text x="1115" y="214" text-anchor="middle" font-size="13.5" fill="#047857">optional &#183; live event log</text>
+
+  <!-- DEFAULT TARGET (solid): the single node a plain run names -->
+  <rect x="990" y="259" width="250" height="86" rx="12" fill="#a7f3d0" stroke="#047857" stroke-width="5.5"/>
+  <text x="1115" y="288" text-anchor="middle" font-size="16.5" font-weight="700" fill="#064e3b">Agent-managed node</text>
+  <text x="1115" y="311" text-anchor="middle" font-size="13.5" fill="#065f46">live Windows event log</text>
+  <text x="1115" y="333" text-anchor="middle" font-size="12.5" font-weight="700" fill="#064e3b">YOUR TARGET</text>
+
+  <!-- optional node (lighter) -->
+  <rect x="990" y="363" width="250" height="86" rx="12" fill="#f0fdf4" stroke="#6ee7b7" stroke-width="3.5"/>
+  <text x="1115" y="398" text-anchor="middle" font-size="16.5" font-weight="700" fill="#047857">Agent-managed node</text>
+  <text x="1115" y="422" text-anchor="middle" font-size="13.5" fill="#047857">optional &#183; live event log</text>
+
+  <text x="1115" y="482" text-anchor="middle" font-size="13.5" font-weight="700" fill="#064e3b">Single target by default</text>
+  <text x="1115" y="503" text-anchor="middle" font-size="13.5" fill="#047857">multiple targets optional</text>
+
+  <!-- ============ FLOW 1 : client -> server ============ -->
+  <circle cx="378" cy="252" r="13.5" fill="#1d4ed8"/>
+  <text x="378" y="257" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">1</text>
+  <text x="400" y="257" font-size="14" font-weight="700" fill="#0f172a">HTTPS 443</text>
+  <line x1="366" y1="280" x2="510" y2="280" stroke="#1e293b" stroke-width="4.5" marker-end="url(#aDark)"/>
+
+  <!-- ============ FLOW 4 : server -> client ============ -->
+  <circle cx="378" cy="352" r="13.5" fill="#334155"/>
+  <text x="378" y="357" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">4</text>
+  <text x="400" y="357" font-size="14" font-weight="700" fill="#0f172a">events</text>
+  <line x1="514" y1="380" x2="370" y2="380" stroke="#334155" stroke-width="4.5" marker-end="url(#aSlate)"/>
+
+  <!-- ============ FLOW 2 : server -> endpoints ============ -->
+  <path d="M 844 275 C 900 275, 920 198, 976 198" fill="none" stroke="#34d399" stroke-width="3.5" marker-end="url(#aGreenLight)"/>
+  <path d="M 844 329 C 900 329, 920 406, 976 406" fill="none" stroke="#34d399" stroke-width="3.5" marker-end="url(#aGreenLight)"/>
+  <line x1="844" y1="302" x2="974" y2="302" stroke="#065f46" stroke-width="5.5" marker-end="url(#aGreen)"/>
+
+  <!-- ============ NUMBERED LEGEND : four even columns, nothing floating ============ -->
+  <line x1="60" y1="518" x2="1240" y2="518" stroke="#cbd5e1" stroke-width="2"/>
+
+  <circle cx="73" cy="556" r="14" fill="#1d4ed8"/>
+  <text x="73" y="561" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff">1</text>
+  <text x="96" y="552" font-size="14" font-weight="700" fill="#0f172a">You sign in and ask</text>
+  <text x="96" y="574" font-size="13" fill="#475569">local Orion account, over HTTPS</text>
+
+  <circle cx="383" cy="556" r="14" fill="#047857"/>
+  <text x="383" y="561" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff">2</text>
+  <text x="406" y="552" font-size="14" font-weight="700" fill="#064e3b">Orion dispatches the read</text>
+  <text x="406" y="574" font-size="13" fill="#065f46">over the agent channel it owns</text>
+
+  <circle cx="693" cy="556" r="14" fill="#047857"/>
+  <text x="693" y="561" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff">3</text>
+  <text x="716" y="552" font-size="14" font-weight="700" fill="#064e3b">The node reads its own log</text>
+  <text x="716" y="574" font-size="13" fill="#065f46">no inbound port is opened</text>
+
+  <circle cx="1003" cy="556" r="14" fill="#334155"/>
+  <text x="1003" y="561" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff">4</text>
+  <text x="1026" y="552" font-size="14" font-weight="700" fill="#0f172a">Events come back to you</text>
+  <text x="1026" y="574" font-size="13" fill="#475569">the job is asynchronous, so the</text>
+  <text x="1026" y="592" font-size="13" fill="#475569">tool repeats step 1 until it is done</text>
+
+  <!-- ============ KEY POINT ============ -->
+  <rect x="60" y="620" width="1180" height="94" rx="12" fill="#fef3c7" stroke="#b45309" stroke-width="4.5"/>
+  <text x="92" y="652" font-size="16" font-weight="700" fill="#78350f">Why no Windows credential is needed</text>
+  <text x="92" y="678" font-size="14.5" fill="#1e293b">Your client never contacts the target node &#8212; the Orion server does. You need HTTPS reach to the Orion server and a local Orion</text>
+  <text x="92" y="698" font-size="14.5" fill="#1e293b">account holding the viewer right. Agentless (WMI) nodes use a different, credentialed path that this tool does not implement.</text>
+</svg>

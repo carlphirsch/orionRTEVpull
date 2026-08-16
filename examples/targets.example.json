@@ -1,0 +1,20 @@
+[
+  {
+    "node_id": 1234,
+    "caption": "HOST01",
+    "os": "Windows 2019 Server",
+    "group": "Example Co"
+  },
+  {
+    "node_id": 1235,
+    "caption": "HOST02",
+    "os": "Windows 2022 Server",
+    "group": "Example Co"
+  },
+  {
+    "node_id": 2001,
+    "caption": "APPSRV1",
+    "os": "Windows 2016 Server",
+    "group": "Other Div"
+  }
+]

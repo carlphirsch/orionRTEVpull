@@ -1,0 +1,9 @@
+*.pcap
+__pycache__/
+*.pyc
+*.env
+
+# Target lists name real NodeIDs and hosts -- keep them out of the repo.
+# The committed example is the one exception.
+targets*.json
+!examples/targets.example.json
